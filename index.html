@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FitPro — Personal Trainer</title>
+  <meta name="description" content="Personal training designed for your goals — online & offline. Book a free consultation." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#00d084; --accent-2:#ff7a59;
+      --maxw:1100px; --radius:12px; font-family: "Montserrat", system-ui, Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071021 0%, #071727 100%);color:#e6eef6;line-height:1.4}
+    .wrap{max-width:var(--maxw);margin:30px auto;padding:20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+    .brand{font-weight:700;font-size:1.15rem;color:var(--accent)}
+    .cta-small{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:999px}
+    header.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:28px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px}
+    .hero-left h1{font-size:2rem;margin:0 0 10px}
+    .hero-left p{color:var(--muted);margin:0 0 18px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#00b06a);color:#042017;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 18px;border-radius:10px;color:var(--muted);cursor:pointer}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .profile{display:flex;gap:14px;align-items:center}
+    .avatar{width:72px;height:72px;border-radius:12px;object-fit:cover;border:3px solid rgba(255,255,255,0.04)}
+    .price{background:rgba(0,0,0,0.35);padding:8px;border-radius:8px;color:var(--accent-2);font-weight:700}
+    section{margin-top:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--card);padding:16px;border-radius:12px}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .testi{display:flex;gap:12px;align-items:center}
+    .testi img{width:56px;height:56px;border-radius:8px;object-fit:cover}
+    form .row{display:flex;gap:10px}
+    input,textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    .small{font-size:0.9rem;color:var(--muted)}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.9rem;padding-bottom:30px}
+
+    /* Responsive */
+    @media (max-width:920px){
+      header.hero{grid-template-columns:1fr; padding:18px}
+      .grid-3{grid-template-columns:1fr}
+      .hero-left h1{font-size:1.6rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">FitPro • TrackMate</div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a class="cta-small" href="#packages">Packages</a>
+        <a class="cta-small" href="#book">Book</a>
+      </div>
+    </div>
+
+    <header class="hero" id="top">
+      <div class="hero-left">
+        <h1>Transform your body — personalized coaching that fits your life</h1>
+        <p class="muted">1-on-1 training, online coaching, and meal plans tailored to your goals. Mobile-friendly, fast-loading landing site to capture clients & bookings.</p>
+
+        <div class="buttons" style="margin-top:14px">
+          <button class="btn-primary" onclick="location.href='#book'">Book Your Free Consult</button>
+          <button class="btn-ghost" onclick="openDemo()">Watch Demo</button>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div class="card" style="display:flex;gap:12px;align-items:center">
+            <img class="avatar" src="https://images.unsplash.com/photo-1554284126-aa88f22d8d0d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=0e1c8f6b8d5bdb2c2b2c3b2b4b3b2b1b" alt="trainer">
+            <div>
+              <div style="font-weight:700">Alex Morgan</div>
+              <div class="small muted">Certified Personal Trainer • 6+ yrs</div>
+            </div>
+            <div style="margin-left:auto" class="price">$249</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3 style="margin:0 0 8px">Quick Overview</h3>
+        <div class="muted" style="margin-bottom:14px">Everything you need to start booking clients today.</div>
+        <div style="display:grid;gap:8px">
+          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Sessions</strong><div class="small muted">1-on-1, Online</div></div>
+            <div style="font-weight:700">$49</div>
+          </div>
+          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Programs</strong><div class="small muted">Meal + Training Plans</div></div>
+            <div style="font-weight:700">$99</div>
+          </div>
+          <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+            <div><strong>Launch Offer</strong><div class="small muted">Setup included</div></div>
+            <div style="font-weight:700;color:var(--accent)">Get Live Today</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About the Coach</h2>
+      <div class="card" style="display:flex;gap:14px;align-items:center">
+        <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d0d?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0e1c8f6b8d5bdb2c2b2c3b2b4b3b2b1b" alt="coach" style="width:160px;border-radius:10px;object-fit:cover">
+        <div>
+          <h3 style="margin:0 0 6px">Alex Morgan — Certified Trainer</h3>
+          <p class="muted">I help busy professionals lose fat, gain strength, and build long-term habits with customized, sustainable plans. Proven track record with clients in the USA & UK.</p>
+          <ul class="small muted">
+            <li>Personalized programs</li>
+            <li>Video coaching & progress tracking</li>
+            <li>Flexible online & in-person sessions</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <h2>Packages</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div class="card">
+          <h4>1-on-1 Training</h4>
+          <p class="muted">In-person sessions focused on strength & technique.</p>
+          <div style="font-weight:700;margin-top:10px">$49 / session</div>
+        </div>
+        <div class="card">
+          <h4>Online Coaching</h4>
+          <p class="muted">Weekly plans, accountability, and weekly video check-ins.</p>
+          <div style="font-weight:700;margin-top:10px">$199 / month</div>
+        </div>
+        <div class="card">
+          <h4>Personal Plan</h4>
+          <p class="muted">Custom diet + training program delivered in 7 days.</p>
+          <div style="font-weight:700;margin-top:10px">$99 one-time</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+        <div class="card" style="min-width:240px;flex:1">
+          <div class="testi">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=abc" alt="">
+            <div>
+              <strong>Rita, 34</strong>
+              <div class="small muted">Lost 12 lbs in 8 weeks</div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:10px">“Alex helped me build a routine that actually sticks. The workouts are challenging but adapt to my schedule.”</p>
+        </div>
+
+        <div class="card" style="min-width:240px;flex:1">
+          <div class="testi">
+            <img src="https://images.unsplash.com/photo-1545996124-1f8f5b5d1b2b?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=def" alt="">
+            <div>
+              <strong>Mike, 28</strong>
+              <div class="small muted">Gained 8 lbs muscle</div>
+            </div>
+          </div>
+          <p class="muted" style="margin-top:10px">“The online coaching plan kept me accountable. Great results.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="book">
+      <h2>Book a Free Consultation</h2>
+      <div class="card">
+        <p class="muted">Fill this quick form and I’ll get back to you within 24 hours to schedule your free consult.</p>
+        <form id="bookForm" onsubmit="handleForm(event)">
+          <div style="display:grid;gap:10px">
+            <input id="name" placeholder="Your full name" required>
+            <input id="email" type="email" placeholder="Email address" required>
+            <input id="phone" placeholder="Phone (optional)">
+            <select id="session">
+              <option value="1-on-1">1-on-1 Training</option>
+              <option value="online">Online Coaching</option>
+              <option value="plan">Personal Plan</option>
+            </select>
+            <textarea id="notes" rows="4" placeholder="Tell me your goal (weight loss / muscle / fitness goal)"></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn-primary" type="submit">Send Request</button>
+              <button type="button" class="btn-ghost" onclick="location.href='#packages'">View Packages</button>
+            </div>
+            <div class="small muted">Or book instantly: <a href="mailto:your+bookings@example.com" style="color:var(--accent)">your+bookings@example.com</a></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> FitPro • Made for Coaches • Demo template
+    </footer>
+  </div>
+
+  <script>
+    // simple demo helper
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function openDemo(){
+      alert('This is a live demo preview. Use the Book button to try the booking flow.');
+      window.scrollTo({top: document.getElementById('book').offsetTop - 20, behavior:'smooth'});
+    }
+
+    function handleForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const session = document.getElementById('session').value;
+      const notes = document.getElementById('notes').value.trim();
+
+      const subject = encodeURIComponent(`Booking request from ${name} — ${session}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSession: ${session}\nNotes: ${notes}`
+      );
+
+      // mailto fallback (no backend). Replace your+bookings@example.com with trainer email.
+      const mailto = `mailto:your+bookings@example.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+
+      // Optionally show a small confirm
+      setTimeout(()=>{
+        alert('Booking request opened in your email client. Send it to complete booking. After payment, email us at your+bookings@example.com');
+      }, 200);
+    }
+  </script>
+</body>
+</html>
